@@ -1,38 +1,12 @@
-# Upstream Provenance — Commons AI Web
+# Archived Provenance Worksheet — Moved to PSDC Web
 
-> State: Source not imported  
-> Import is blocked until every required field and approval is complete.
+The authoritative import policy is
+`psdc-web:docs/upstream/Open-WebUI-Provenance-Policy.md`.
 
-## Selected baseline; import pending
+No Open WebUI source was imported into `psdc-ai`. This path is retained as a
+migration pointer and MUST NOT contain web-client source or authorize an import.
 
-| Field | Value |
-|---|---|
-| Upstream project | Open WebUI |
-| Canonical repository | `https://github.com/open-webui/open-webui` |
-| Selected release | `v0.6.5`, subject to the evidence gates below |
-| Immutable commit | **TO VERIFY** |
-| Source archive checksum | **TO RECORD** |
-| Verified license | BSD-3-Clause for the exact imported material — **LEGAL REVIEW REQUIRED** |
-| Import date | **NOT IMPORTED** |
-| Import author/reviewer | **TO ASSIGN** |
-
-## Required evidence
-
-- [ ] Resolve the release tag to an immutable commit from the canonical repository.
-- [ ] Archive the exact source and record cryptographic checksums.
-- [ ] Preserve the applicable license and copyright notices verbatim.
-- [ ] Inventory all imported, removed, generated, and vendored files.
-- [ ] Produce dependency and license reports from locked dependencies.
-- [ ] Produce the initial SBOM.
-- [ ] Complete legal/open-source review.
-- [ ] Complete vulnerability and secret scans.
-- [ ] Complete accessibility baseline testing.
-- [ ] Name maintainers and vulnerability-response targets.
-- [ ] Select the license for downstream-authored changes.
-- [ ] Add an automated gate rejecting post-v0.6.5 Open WebUI material.
-
-## Permanent boundary
-
-Post-v0.6.5 Open WebUI code, assets, patches, and generated artifacts are not an
-upstream source. Any proposed exception requires file-level provenance and license
-review plus a new ADR before the material enters repository history.
+ADR-0025 moved browser-client ownership to the independent `psdc-web` repository.
+Any future upstream evaluation, immutable source reference, license record, file
+inventory, checksum, SBOM, security review, accessibility review, and maintenance
+decision belongs in the pull request that proposes an import into that repository.

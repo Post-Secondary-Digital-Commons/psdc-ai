@@ -7,7 +7,7 @@ track and only becomes a dependency at Phase 9.
 ```text
 Phase 0   Club + institutional partnership
 Phase 1   Platform kernel (gateway, identity, API contract)
-Phase 2   AI MVP (Commons AI Web + OpenCode + one local model)
+Phase 2   AI MVP (independent PSDC Web + OpenCode + one local model)
 Phase 3   Production foundation (HA, PostgreSQL/Valkey, policy, telemetry)
 Phase 4   Academic platform (Brightspace, read-only)
 Phase 5   Personal Student Agent (tasks, calendar, reminders, planning)
@@ -39,7 +39,7 @@ locked early:
 Milestone: login → gateway → local model → "hello". If that's reliable, the
 nucleus of the whole platform exists.
 
-**Phase 2 — AI MVP.** Commons AI Web + OpenCode + one local inference engine.
+**Phase 2 — AI MVP.** Independent `psdc-web` + OpenCode + one local inference engine.
 The web client starts from the verified Open WebUI v0.6.5 BSD source only after
 ADR-0009's provenance, legal, security, accessibility, and maintenance gates pass.
 Use a handful of aliases (`AC Fast`, `AC General`, `AC Code`, `AC Reasoning`), not

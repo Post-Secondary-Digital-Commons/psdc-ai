@@ -1,8 +1,9 @@
 # psdc-ai
 
 Commons AI Fabric subsystem of the **Post-Secondary Digital Commons**: identity-aware AI access,
-gateway and model routing, web/OpenCode integration, academic capabilities,
-agents, SDKs, inference adapters, and web/desktop/mobile clients.
+gateway and model routing, client/OpenCode integration, academic capabilities,
+agents, SDKs, and inference adapters. Browser, desktop, and mobile clients
+release from their own repositories.
 
 **Status:** pre-code scaffold. The architecture, ADRs, and accepted technology
 catalog are the current source of truth. Component directories mark ownership
@@ -51,12 +52,13 @@ be required for core operation.
 
 ## First vertical slice (target for the earliest working prototype)
 
-1. `ac-ai-gateway` — the one service everything else depends on
+1. Commons AI Gateway — the one AI service the clients depend on
 2. Basic user authentication (dev-auth is fine before Entra is wired up)
 3. One local model behind it
 4. OpenAI-compatible API surface (`/v1/chat/completions`, `/v1/models`, etc.)
-5. Commons AI Web in `apps/web`, bootstrapped from a legally and technically
-   verified Open WebUI v0.6.5 BSD source baseline and pointed only at the gateway
+5. The independent `psdc-web` client, bootstrapped only from a legally and
+   technically verified Open WebUI v0.6.5 BSD source baseline and pointed only
+   at the gateway
 6. A thin OpenCode integration pointed at the same gateway, subject to release
    license review
 7. A basic usage/logging dashboard
